@@ -9,7 +9,7 @@ class PrecioHistoricoVehiculos(models.Model):
 
 
 annos_choices = []
-for r in range(1950, (datetime.now().year+1)): #mostrar en clases
+for r in range(1950, (datetime.now().year+2)): #mostrar en clases
     annos_choices.append((r,r))
 def anno_actual():
     return datetime.date.today().year
