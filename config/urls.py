@@ -16,8 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from migraciones.views import AutomotrizCreateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('blogsite.urls')),
+    path('crear_automotriz/', AutomotrizCreateView.as_view(), name='crear_automotriz'),
 ]
