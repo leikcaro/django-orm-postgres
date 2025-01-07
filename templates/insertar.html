@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert</title>
+</head>
+<body>
+    <h2>Inserte datos de los empleados:</h2>
+    <br>
+    <form method="post">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td>
+                    ID del empleado:
+                </td>
+                <td> <input type="text" placeholder="Ingrese el id:" name="emp_id"></td>
+
+            </tr>
+            <tr>
+                <td>Nombre del empleado:</td>
+                <td><input type="text" placeholder="Ingrese el nombre del empleado:" name="emp_nombre"></td>
+            </tr>
+            <tr>
+                <td>Correo</td>
+                <td><input type="email" placeholder="Ingrese el correo:" name="emp_correo"></td>
+
+            </tr>
+            <tr>
+                <td>Designación</td>
+                <td><select name="emp_designacion">
+                    <option selected disabled=True> Seleccione la Designación</option>
+                    <option> PM</option>
+                    <option> DEV</option>
+                    <option> Soporte</option>
+                    <option> WEB</option>
+                </select>
+                </td>
+                
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input type="submit" class="btn btn-success"></td>
+            </tr>
+        </table>
+        <br><br>
+        <div class= "alert alert-danger" role= "alert">
+            ¿Quiere ver la info de empleados?  
+        </div>
+
+        <p>
+            <a href="{% url 'mostrar-emp' %}"> Ir a la info del empleado</a>
+        </p>
+    </form>
+</body>
+</html>

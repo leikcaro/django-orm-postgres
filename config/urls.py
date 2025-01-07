@@ -20,6 +20,7 @@ from migraciones.views import AutomotrizCreateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('crudapp/', include('crudapp.urls')),
     path('', include('blogsite.urls')),
     path('crear_automotriz/', AutomotrizCreateView.as_view(), name='crear_automotriz'),
 ]
