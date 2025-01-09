@@ -21,11 +21,27 @@ def insertar_emp(request):
 
 
 def mostrar_emp(request):
-    pass
+    empleados = Empleado.objects.all()
+    return render(request, 'mostrar.html', {'empleados': empleados})
 
-def editar_emp(request):
-    pass
+def editar_emp(request, pk):
+    empleado = Empleado.objects.get(emp_id=pk)
+    return render(request, 'editar.html', {'empleado': empleado})
+
+def actualizarempleado(request, id):
+    emp_id = request.POST['emp_id']
+    emp_nombre = request.POST['emp_nombre']
+    emp_correo = request.POST['emp_correo']
+    emp_designacion = request.POST['emp_designacion']
+    empleado = Empleado.objects.get(id=id)
+    empleado.emp_id = emp_id
+    empleado.emp_nombre = emp_nombre
+    empleado.emp_correo = emp_correo
+    empleado.emp_designacion = emp_designacion
+    empleado.save()
+    return redirect('/crudapp/mostrar')    
 
 def eliminar_emp(request):
+    """Eliminar un empleado de la base de datos."""
     pass
 
