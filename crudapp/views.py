@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import *
+from django.views.generic import TemplateView
 
 # Create your views here.
 
@@ -45,3 +46,8 @@ def eliminar_emp(request):
     """Eliminar un empleado de la base de datos."""
     pass
 
+class InicioPageView(TemplateView):
+    template_name = 'inicio.html'
+
+class AcercaPageView(TemplateView):
+    template_name = 'acerca-de.html'

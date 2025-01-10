@@ -42,10 +42,10 @@
             <td>{{ empleado.emp_correo }}</td>
             <td>{{ empleado.emp_designacion }}</td>
             <td>
-              <a href="crudapp/editar/{{ empleado.pk }}">Actualizar</a>
+              <a href="crudapp/editar/{{ empleado.id }}">Actualizar</a>
             </td>
             <td>
-              <a href="crudapp/eliminar/{{ empleado.pk }}">Eliminar</a>
+              <a href="crudapp/eliminar/{{ empleado.id}}">Eliminar</a>
             </td>
           </tr>
         {% endfor %}

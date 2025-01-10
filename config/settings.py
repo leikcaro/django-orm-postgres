@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'blogsite.apps.BlogsiteConfig',
     'migraciones',
     'crudapp',
+    'calculadora',
 ]
 
 MIDDLEWARE = [

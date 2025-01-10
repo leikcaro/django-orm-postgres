@@ -1,0 +1,16 @@
+<!-- calculadora/crear_operacion.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Crear Operación</title>
+</head>
+<body>
+    <h1>Crear una nueva operación</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Calcular</button>
+    </form>
+</body>
+</html>

@@ -23,4 +23,6 @@ urlpatterns = [
     path('crudapp/', include('crudapp.urls')),
     path('', include('blogsite.urls')),
     path('crear_automotriz/', AutomotrizCreateView.as_view(), name='crear_automotriz'),
+    #path('migraciones/', include('migraciones.urls')),
+    path('calculadora/', include('calculadora.urls')),
 ]
